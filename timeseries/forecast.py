@@ -40,7 +40,7 @@ if __name__ == '__main__':
     conn.start_clipper()
     try:
         conn.register_application(name="forecast",input_type="strings",default_output="500, Error executing call.",slo_micros=100000000)
-        python_deployer.deploy_python_closure(conn, name="do-forecast", version=1, input_type="strings", func=do_forecast, base_image='wamsiv/timeseries')
+        python_deployer.deploy_python_closure(conn, name="do-forecast", version=1, input_type="strings", func=do_forecast, base_image='wamsiv/timeseries:latest')
         conn.link_model_to_app(app_name="forecast", model_name='do-forecast')
         print(subprocess.getoutput(["docker update --restart=on-failure $(docker ps -a | grep 'clipper/query_frontend:0.3.0' | awk '{ print $1 }')"]))
         input("Server started. Press ctrl+c to stop server.\n")
