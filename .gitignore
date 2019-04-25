@@ -1,0 +1,21 @@
+*.DS_Store
+*.log
+.port
+mapdql_history.txt
+stats.txt
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
