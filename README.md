@@ -15,3 +15,6 @@ Get a conda installation with (Miniconda)[https://docs.conda.io/en/latest/minico
     bash ./start.sh
 
 Logs are stored at `timeseries/log.log`
+
+## Example Notebooks
+Demo notebooks are available at `notebooks/`. Make sure the server is running before running the notebooks. 
