@@ -1,5 +1,7 @@
+flake8
 pandas
 numpy>=1.16
 pymapd >=0.10.0
 pystan
 fbprophet
+clipper_admin
